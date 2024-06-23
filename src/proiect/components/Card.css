@@ -1,8 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 #sidebarCard{
     background-color: rgba(128, 128, 128, 0.112);
     border-radius: 0.4rem;
     padding: 0.2rem 0.2rem;
 }
+
+
 
 #cardSection{
     display: flex;
@@ -12,8 +21,9 @@
     gap: 1.8%;
 }
 
+
 .card {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 0.4rem;
     width: 32%;
     min-width: 100px;
@@ -25,7 +35,7 @@
 
 .card > img{
     width: 100%;
-    height: 40%;
+    height: 45%;
     overflow: hidden;
 }
 
@@ -46,4 +56,41 @@
     background-color: black;
     color: white;
     border: transparent;
+}
+
+#testimonialCard{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    background-color: rgba(128, 128, 128, 0.112);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+#testimonialCard > img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+#testimonialCard > blockquote {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+#testimonialCard > blockquote > p,
+#testimonialCard > blockquote > cite{
+    font-size: 1rem;
+    padding: 0;
+    text-align: justify;
+    font-weight: 600;
+}
+
+.author, .company, .card > h2, #sidebarCard > h5, cite{
+    color: #395ca7;
+}
+
+#testimonialCard > blockquote > cite > span{
+    color: black;
 }

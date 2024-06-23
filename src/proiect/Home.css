@@ -4,10 +4,20 @@
     box-sizing: border-box;
 }
 
-#homeContainer{
+#test{
     display: flex;
     gap: 1rem;
+    margin-top: 60px;
+}
+
+#homeContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
     padding: 2rem 14rem;
+
+
+    
 }
 
 #leftContainer{
@@ -18,8 +28,25 @@
 }
 
 #sideBarContainer {
+    /* position: fixed;
+    top: 80px; */
     display: flex;
     flex-direction: column;
     gap: 1rem;
     width: 30%;
+}
+
+#testimonialsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 2rem;
+    background-color: rgba(128, 128, 128, 0.062);
+    border-radius: 5px;
+
+}
+
+#testimonialCards{
+    display: flex;
+    gap: 1rem;
 }

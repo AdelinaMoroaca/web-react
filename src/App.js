@@ -6,6 +6,8 @@ import NavBar from './NavBar';
 // // import Homepage from '../src/code/Homepage';
 // import Homepage from './proiect/Home';
 import Home from '../src/proiect/Home';
+import About from '../src/proiect/About';
+import Contact from '../src/proiect/Contact';
 
 
 function App() {
@@ -23,6 +25,9 @@ function App() {
       </div> */}
 
       <Home/>
+      <About/>
+      <Contact/>
+
       {/* <UserItem/> */}
 
     </div>

@@ -12,12 +12,12 @@ function NavBar({homePageLink, aboutPageLink, contactPageLink}) {
           </a>
         </li>
         <li className="nav-item">
-          <a href="/" className="nav-link">
+          <a href={aboutPageLink} className="nav-link">
             About
           </a>
         </li>
         <li className="nav-item">
-          <a href="/" className="nav-link">
+          <a href={contactPageLink} className="nav-link">
             Contact
           </a>
         </li>

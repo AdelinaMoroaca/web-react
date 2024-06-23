@@ -13,12 +13,27 @@ function SidebarCard(props){
 
 function BlogCard(props){
     const {title, description, image, button} = props;
-    return <div className = 'card'>
+    return (
+    <div className = 'card'>
         <img src = {image} alt = ''/>
         <h2>{title}</h2>
         <p>{description}</p>
         <button>{button}</button>
     </div>
+    )
 }
 
-export { SidebarCard, BlogCard };
+function TestimonialCard(props){
+    const {image, description, author, company} = props;
+    return (
+    <div id='testimonialCard'>
+        <img src = {image} alt = ''/>
+        <blockquote>
+            <p>{description}</p>
+            <cite>{author}<span>,</span> {company}</cite>
+        </blockquote>
+    </div>
+    )
+}
+
+export { SidebarCard, BlogCard, TestimonialCard };
