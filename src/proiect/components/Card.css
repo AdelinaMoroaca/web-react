@@ -11,17 +11,6 @@
     padding: 0.2rem 0.2rem;
 }
 
-
-
-#cardSection{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 1.8%;
-}
-
-
 .card {
     /* border: 1px solid black; */
     border-radius: 0.4rem;

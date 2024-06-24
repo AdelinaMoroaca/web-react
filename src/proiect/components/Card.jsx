@@ -1,4 +1,4 @@
-import "./Card.css";
+import './Card.css';
 
 
 function SidebarCard(props){
@@ -26,7 +26,7 @@ function BlogCard(props){
 function TestimonialCard(props){
     const {image, description, author, company} = props;
     return (
-    <div id='testimonialCard'>
+    <div id = 'testimonialCard'>
         <img src = {image} alt = ''/>
         <blockquote>
             <p>{description}</p>

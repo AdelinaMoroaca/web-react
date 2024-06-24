@@ -1,5 +1,5 @@
-import React from "react";
-import "./Footer.css";
+import React from 'react';
+import './Footer.css';
 import { defaultTo } from "lodash";
 
 function Footer(props){

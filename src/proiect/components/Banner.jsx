@@ -1,11 +1,11 @@
 import banner from '../assets/banner.jpg'
-import "./Banner.css";
+import './Banner.css';
 
 
 function Banner(){
     return(
       <div>
-        <img id = 'banner' src={banner} alt="Banner" />
+        <img id = 'banner' src={banner} alt= 'Banner' />
       </div>
     )
 }
