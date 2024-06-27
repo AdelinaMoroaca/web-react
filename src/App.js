@@ -8,11 +8,12 @@ import NavBar from './NavBar';
 import Home from '../src/proiect/Home';
 import About from '../src/proiect/About';
 import Contact from '../src/proiect/Contact';
-
+import ToggleTheme from './proiect/components/ToggleTheme';
 
 function App() {
   return (
-    <div>
+    <div > 
+      {/* className='app-content'> */}
       {/* <NavBar homePageLink="/" aboutPageLink="/about" contactPageLink="/contact"/> */}
 
       {/* <NavBar homePageLink="/newHome" aboutPageLink="/newAbout" contactPageLink="/newContact"/> */}
@@ -24,10 +25,10 @@ function App() {
       
       </div> */}
 
-      <Home/>
+      {/* <Home/>
       <About/>
-      <Contact/>
-
+      <Contact/> */}
+      <ToggleTheme/>
       {/* <UserItem/> */}
 
     </div>

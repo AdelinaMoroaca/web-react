@@ -1,0 +1,20 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-content {
+    height: 100%;
+    max-width: 1090px;
+}
+
+.light-theme {
+    background-color: white;
+    color: black;
+}
+
+.dark-theme {
+    background-color: black;
+    color: white;
+}
