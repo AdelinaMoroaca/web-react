@@ -7,6 +7,9 @@ body {
 .app-content {
     height: 100%;
     max-width: 1090px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .light-theme {
@@ -16,5 +19,16 @@ body {
 
 .dark-theme {
     background-color: black;
+    color: white;
+}
+
+
+.style1 {
+    background-color: white;
+    color: blueviolet;
+}
+
+.style2 {
+    background-color: blueviolet;
     color: white;
 }

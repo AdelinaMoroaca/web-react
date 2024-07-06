@@ -8,6 +8,33 @@ function ToggleTheme(){
         setTheme(theme === 'light' ? 'dark' : 'light');
     };
 
+
+    return(
+        
+        <div   style={{  display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            borderRadius: '5px',
+            padding: '10px',
+            minHeight: '200px'}}
+
+            className = {theme === 'light' ? 'light-theme' : 'dark-theme'}>
+            
+            <button onClick={handleToggleTheme}>Toggle Theme</button>
+
+            <p style = {{marginTop:'auto'}} >The current theme is {theme}.</p>
+        </div>
+    )
+}
+
+
+function ToggleExTheme(){
+    const [theme, setTheme] = useState('scrisMov');
+
+    const handleToggleTheme = () => {
+        setTheme(theme === 'scrisMov' ? 'notDefault' : 'scrisMov');
+    };
+
     const newStyle = {
         display: 'flex',
         flexDirection: 'column',
@@ -20,8 +47,7 @@ function ToggleTheme(){
 
     return(
         <div style = {newStyle} 
-            
-            className = {theme === 'light' ? 'light-theme' : 'dark-theme'}>
+            className = {theme === 'scrisMov' ? 'style1' : 'style2'} >
             
             <button onClick={handleToggleTheme}>Toggle Theme</button>
 
@@ -30,4 +56,4 @@ function ToggleTheme(){
     )
 }
 
-export default ToggleTheme;
+export { ToggleTheme , ToggleExTheme};

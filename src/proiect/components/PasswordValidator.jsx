@@ -6,67 +6,89 @@ function PasswordValidator(){
         password: '',
     });
 
-    const [isError, setErrors] = useState(true);
+    //const [isError, setErrors] = useState(true);
     const [isValid, setIsValid] = useState(false);
+
+
+    //pt butonul de submit
     const validatePass = (passwordValue) => {
-        if (passwordValue.length >= 8 && passwordValue.length <= 16) {
-            setIsValid(true);
-            console.log("Password length is valid.");
-        } else {
-            console.log("Password length is invalid.");
-            setIsValid(false)
-        }
+        setFormValues(passwordValue === '' ? 'PAROLA MERGE FCT' : 'NU MERGE FCT')
+        // if (passwordValue.length >= 3 && passwordValue.length <= 6) {
+        //     setIsValid(true);
+        //     console.log("Password length is valid.");
+        // } else {
+        //     console.log("Password length is invalid.");
+        //     setIsValid(false)
+        // }
     };
 
+    const isNotError = {
+        display: 'none',
+    }
+
     return(
-        <div>
-             <h2>
-                Verifica daca parola are intre 8-16 caractere incluzand litere
+        <div style={{display: 'flex',flexDirection: 'column',alignItems: 'center',justifyContent: 'center',}}>
+
+            <h2>
+                Verifica daca parola are intre 3-6 caractere incluzand litere
             </h2>
      
-        <form autoComplete = 'off'>
-            <input className={"new"}
-                id='pass'
-                type="password"
-                name = 'password'
-                placeholder = 'Input your password...' 
-                value={passwordValue.password}
-                className={isValid ? 'new' : 'invalid-password'}
+            <form autoComplete = 'off'>
+                <input className={'new'}
+                    id='pass'
+                    type="password"
+                    name = 'password'
+                    placeholder = 'Input your password...' 
+                    value={passwordValue.password}
+                    //className={isValid ? 'new' : 'invalid-password'}
 
-                onChange={(e) => {
-                    const passwordValue = e.target.value;
+                    onChange={(e) => {
+                        const passwordValue = e.target.value;
 
-                    setFormValues({
-                        ...passwordValue,
-                        password: passwordValue,
-                    })
+                        // if(passwordValue.length >= 8 && passwordValue.length <= 16){
+                        //     console.log('merge')
+                        // } else {
+                        //     console.log('eroare eroare')
+                        // }
 
-                    // setErrors(!isError){
-                    //     {isError ? 'Hide Details' : 'Show Details'}
+                        setFormValues({
+                            ...passwordValue,
+                            password: passwordValue,
+                        })
 
-                    // }
-                    // if (passwordValue.length >= 8 && passwordValue.length <= 16) {
-                    //     // useState(true);
-                        
-                    // } else {
-                    //     console.log("Password length is invalid.");
-                    //     // useState(false)
-                    // }
-                }}
-            
-            />
+                        // setErrors(!isError){
+                        //     {isError ? 'Hide Details' : 'Show Details'}
 
-            <p>valoarea din state: {passwordValue.password}</p>
+                        // }
+                        // if (passwordValue.length >= 8 && passwordValue.length <= 16) {
+                        //     // useState(true);
+                            
+                        // } else {
+                        //     console.log("Password length is invalid.");
+                        //     // useState(false)
+                        // }
+                    }}
+                
+                />
 
-            <p>varificarea lumgimii din state: {setErrors}</p>
-            
-            
-            
-            <div>
-            <button onClick={() => validatePass(passwordValue)}>Validate Password</button>
-            </div>
-        </form>
-    </div>
+               
+
+                <p style = {isNotError}
+                className= {passwordValue.length >= 3 && passwordValue.length <= 6 ? console.log('VALID') : console.log('NOT VALID')}
+
+
+                > Afiseaza text de eroare</p>
+                <p>valoarea din state: {passwordValue.password}</p>
+
+                {/* <p>varificarea lumgimii din state: {setErrors}</p> */}
+                
+                
+                
+                <div>
+                <button onClick={() => validatePass(passwordValue)}>Validate Password</button>
+                </div>
+            </form>
+        </div>
     )
 }
 

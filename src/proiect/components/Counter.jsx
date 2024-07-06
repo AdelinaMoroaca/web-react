@@ -4,8 +4,8 @@ function GoodCounter(props) {
     const [count, setCount] = useState(0);
     return (
       <div>
-        <button onClick={() => setCount(count + 1)}>Increase</button>
-        <button onClick={() => setCount(count - 1)}>Decrease</button>
+        <button onClick={() => setCount(count + 1)}> + </button>
+        <button onClick={() => setCount(count - 1)}> - </button>
         <p>Current Count: {count} </p>
       </div>
     );

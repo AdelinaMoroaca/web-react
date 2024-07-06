@@ -11,7 +11,7 @@ function LoginForm(){
         <div>
             <h4>Login</h4>
 
-            <form autoComplete = 'off' onSubmit={(`form submitted`)}>
+            <form autoComplete = 'off' onSubmit={() => alert(`form submitted`)}>
                 <input 
                     name = 'username'
                     type = 'text'
@@ -19,6 +19,8 @@ function LoginForm(){
                     value={formValues.username}
                     onChange={(event) => {
                         const value = event.target.value;
+
+                        //if(value.length > 8) return <p>Mai incerca</p>;
 
                         setFormValues({
                             ...formValues,
@@ -43,7 +45,8 @@ function LoginForm(){
                         })
                     }}
                 />
-                <p>Error: afiseaza tipul de eroare...</p>
+                {/* 
+                {<p>Error: afiseaza tipul de eroare...</p> */}
 
                 <p>valoarea din state: {formValues.password}</p>
 

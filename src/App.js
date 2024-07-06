@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+// import { GoodCounter } from './proiect/components/Counter';
 // import { divide } from 'lodash';
 // import NavBar from './NavBar';
 // import {UserItem} from '../src/code/UserItem';
@@ -8,19 +9,42 @@ import './App.css';
 // import Home from '../src/proiect/Home';
 // import About from '../src/proiect/About';
 // import Contact from '../src/proiect/Contact';
-// import ToggleTheme from './proiect/components/ToggleTheme';
-// import Form from './proiect/components/Form';
+// import {ToggleTheme, ToggleExTheme} from './proiect/components/ToggleTheme';
+// import {Form, ExempleForm} from './proiect/components/Form';
 // import ToggleVisibility from './proiect/components/ToggleVisibility';
 // import {GoodCounter, BadCounter} from './proiect/components/Counter';
 // import LoginForm from './proiect/components/LoginForm';
-import PasswordValidator from './proiect/components/PasswordValidator';
-
+import { Contact, PassValidator} from './proiect/components/PassValidator';
+// import PasswordValidator from './proiect/components/PasswordValidator';
+// import ToggleTheme from './proiect/components/ToggleTheme';
+// import './proiect/components/ToggleTheme.css'
 
 function App() {
   return (
-    <div > 
-      <PasswordValidator/>
+    <div className='app-content'> 
+      {/* <ToggleTheme/> */}
+      {/* <ToggleExTheme/> */}
+      
+      {/* <ToggleVisibility/> */}
+
+      {/* <p>ex cu useState</p>
+      <GoodCounter/>
+
+      <br/>
+
+      <p>ex fara useState</p>
+      <BadCounter/> */}
+
+      {/* <LoginForm/> */}
+
+
+
+      <Contact/>
+      <PassValidator/>
+   
+  
     </div>
+    
   );
 }
 
