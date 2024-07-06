@@ -21,23 +21,78 @@ function NavBar({homePageLink, aboutPageLink, contactPageLink}) {
       window.open('../Contact', '_blank');
     }
   return (
-    <nav className = 'nav'>
-      <ul className = 'nav-list'>
+    <nav id = 'nav'>
+      <div id='freeShippingBanner'>
+        <p>Free Standard shipping to Romania over RON360</p>
+        <p>XXXX just pulled up, and you can only get it here. Sign up now to shop it first. | SHOP NOW</p>
+      </div>
+      <ul className = 'nav-list' id='brandMenu'>
+        <li>Country</li>
+        <li>LOGO BRAND</li>
+        <li>UserAccount</li>
+
+      </ul>
+      <ul className = 'nav-list' id='ecommerceMenu'>
         <li className = 'nav-item'>
           <a onClick = {handleHomeClick} href = {homePageLink} className = 'nav-link'>
-            Home
+            New + Bestsellers
           </a>
         </li>
         <li className = 'nav-item'>
           <a onClick = {handleAboutClick} href = {aboutPageLink} className = 'nav-link'>
-            About
+            Makeup
           </a>
         </li>
         <li className = 'nav-item'>
           <a onClick={handleContactClick} href={contactPageLink} className = 'nav-link'>
-            Contact
+            Skincare
           </a>
         </li>
+
+        <li className = 'nav-item'>
+          <a onClick={handleContactClick} href={contactPageLink} className = 'nav-link'>
+            Hair
+          </a>
+        </li>
+
+        <li className = 'nav-item'>
+          <a onClick={handleContactClick} href={contactPageLink} className = 'nav-link'>
+            Fragrance
+          </a>
+        </li>
+
+        <li className = 'nav-item'>
+          <a onClick={handleContactClick} href={contactPageLink} className = 'nav-link'>
+            XXX beauty box
+          </a>
+        </li>
+
+
+        <li className = 'nav-item'>
+          <a onClick={handleContactClick} href={contactPageLink} className = 'nav-link'>
+            Virtual Services
+          </a>
+        </li>
+
+        <li className = 'nav-item'>
+          <a onClick={handleContactClick} href={contactPageLink} className = 'nav-link'>
+            Replen + Save
+          </a>
+        </li>
+
+        <li className = 'nav-item'>
+          <a onClick={handleContactClick} href={contactPageLink} className = 'nav-link'>
+            Discover
+          </a>
+        </li>
+
+        <li className = 'nav-item'>
+          <a onClick={handleContactClick} href={contactPageLink} className = 'nav-link'>
+            Sale
+          </a>
+        </li>
+
+   
       </ul>
     </nav>
   );

@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import './PassValidator.css';
 
 
-function Contact(){
+function ContactList(){
  return (
-    <div>
-         <h1>WE’RE HERE FOR YOU!</h1>
+    <div id='introForm'>
+         <h2>WE’RE HERE FOR YOU!</h2>
          <p>Email Our Customer Service (customerservice@pampam.com) or call XXXXXXXXX. Operating hours are 9:00am – 9:00pm ET, Monday- Friday and Saturday 9:00am- 6:00pm ET, excluding major EU holidays.</p>
     </div>
 
@@ -337,4 +337,4 @@ function PassValidator(){
 }
 
 
-export { Contact, PassValidator};
+export { ContactList, PassValidator};

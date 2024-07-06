@@ -29,27 +29,37 @@
     
 }
 
+/* LEFT */
+#leftContainer > ul{
+    list-style-type: none;
+}
+
+#leftContainer > ul > li {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* RIGHT */
+
 .formStyle {
     display: flex;
     flex-direction: column;
     /* align-items: flex-start; */
     /* justify-content: space-between; */
-    border-radius: 20px;
-    border: 3px solid pink;
-    padding: 20px;
+    /* border-radius: 20px; */
+    /* border: 3px solid pink; */
+    /* padding: 20px; */
     background-color: rgba(255, 192, 203, 0.438);
-    width: 70%;
+    width: 100%;
 }
 
 .input {
     display: flex;
     justify-content: space-between;
-    /* justify-content: center; */
-    /* align-items: flex-start; */
-    /* justify-content: flex-start; */
-    /* justify-content: center; */
-    /* align-items:first baseline; */
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 10px;
     background-color: rgba(0, 255, 255, 0.211);
     gap: 10px;
@@ -70,6 +80,19 @@ label{
     /* justify-content: space-between; */
     /* justify-content: space-between; */
     align-items: flex-start;
-    /* width: 100%; */
+ 
+}
+
+
+
+/* ContactList */
+#introForm{
+    padding: 10px;
+    letter-spacing: 0.06rem;
+}
+
+#introForm > p {
+    font-size: 18px;
+
 }
 

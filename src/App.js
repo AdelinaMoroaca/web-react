@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+import NavBar from './proiect/components/NavBar';
 // import { GoodCounter } from './proiect/components/Counter';
 // import { divide } from 'lodash';
 // import NavBar from './NavBar';
@@ -14,10 +15,12 @@ import './App.css';
 // import ToggleVisibility from './proiect/components/ToggleVisibility';
 // import {GoodCounter, BadCounter} from './proiect/components/Counter';
 // import LoginForm from './proiect/components/LoginForm';
-import { Contact, PassValidator} from './proiect/components/PassValidator';
+// import { Contact, PassValidator} from './proiect/components/PassValidator';
 // import PasswordValidator from './proiect/components/PasswordValidator';
 // import ToggleTheme from './proiect/components/ToggleTheme';
 // import './proiect/components/ToggleTheme.css'
+import Contact from './proiect/Contact';
+
 
 function App() {
   return (
@@ -38,11 +41,13 @@ function App() {
       {/* <LoginForm/> */}
 
 
-
-      <Contact/>
-      <PassValidator/>
+      {/* <Home/> */}
+     
+      {/* <PassValidator/> */}
    
-  
+
+      <NavBar/>
+      <Contact/>
     </div>
     
   );
