@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.defaultStyle {
+    border: 2px solid yellow;
+ 
+}
+
+.errorStyle {
+    border: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.493);
+
+ 
+}
+
+.passedStyle {
+    border: 1px solid green;
+    background-color: rgba(0, 128, 0, 0.568);
+    /* display: none; */
+}
+
+.errorColor {
+    color: red;
+    display: block;
+}
+
+.passedColor {
+    color: green;
+    display: block;
+    
+}
+
+/* LEFT */
+#leftContainer > ul{
+    list-style-type: none;
+}
+
+#leftContainer > ul > li {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* RIGHT */
+
+.formStyle {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    /* justify-content: space-between; */
+    /* border-radius: 20px; */
+    /* border: 3px solid pink; */
+    /* padding: 20px; */
+    background-color: rgba(255, 192, 203, 0.438);
+    width: 100%;
+}
+
+.input {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    padding: 10px;
+    background-color: rgba(0, 255, 255, 0.211);
+    gap: 10px;
+}
+
+
+
+label{
+    background-color: rgba(127, 255, 212, 0.813);
+    width: 100%;
+    border: 1px solid blue;
+
+}
+
+.other {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* justify-content: space-between; */
+    align-items: flex-start;
+ 
+}
+
+
+
+/* ContactList */
+#introForm{
+    padding: 10px;
+    letter-spacing: 0.06rem;
+}
+
+#introForm > p {
+    font-size: 18px;
+
+}
+

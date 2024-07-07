@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from "./components/NavBar";
-import { ContactList, PassValidator} from "./components/PassValidator";
+import { ContactList, PassValidator} from "./components/ContactUs";
 import './Contact.css';
 
 function Contact() {

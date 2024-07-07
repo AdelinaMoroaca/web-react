@@ -23,7 +23,7 @@ function ToggleVisibility(){
             alignItems: 'center',
             gap: '10px',}}>
             {/* echivalent cu  handleClick() ~ byDefault statul este in IF*/}
-            <button onClick={() => setIsVisibile(!isVisibile)}> 
+            <button onMouseEnter={() => setIsVisibile(!isVisibile)}> 
                 {isVisibile ? 'Hide Details' : 'Show Details'}
             </button>
 

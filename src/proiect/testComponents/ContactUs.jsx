@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './PassValidator.css';
+import './ContactUs.css';
 
 
 function ContactList(){

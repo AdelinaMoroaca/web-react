@@ -6,7 +6,7 @@ function About() {
     return (
     <div id = 'aboutPage'>
        {/* <NavBar/>  */}
-       
+       <p>poiuyt</p>
     </div>
     );
 }

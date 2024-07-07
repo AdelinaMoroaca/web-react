@@ -1,9 +1,13 @@
 import React from 'react';
+import { useState } from 'react';
 import './NavBar.css';
 import About from '../About';
 
 
+
 function NavBar({homePageLink, aboutPageLink, contactPageLink}) {
+  const[isOn, setIsOn] = useState(false);
+
     function handleHomeClick(event){
       event.preventDefault();
       window.open('../Home', '_blank');
@@ -20,23 +24,34 @@ function NavBar({homePageLink, aboutPageLink, contactPageLink}) {
       event.preventDefault();
       window.open('../Contact', '_blank');
     }
+
   return (
     <nav id = 'nav'>
       <div id='freeShippingBanner'>
-        <p>Free Standard shipping to Romania over RON360</p>
-        <p>XXXX just pulled up, and you can only get it here. Sign up now to shop it first. | SHOP NOW</p>
+        <p id='freeShipping'>Free Standard shipping to Romania over RON360</p>
+        <p id='offerShipping'>XXXX just pulled up, and you can only get it here. Sign up now to shop it first. | SHOP NOW</p>
       </div>
+
       <ul className = 'nav-list' id='brandMenu'>
-        <li>Country</li>
-        <li>LOGO BRAND</li>
-        <li>UserAccount</li>
+        <li id='country'>Country</li>
+        <li id='logo'>LOGO BRAND</li>
+        <li id='userAccount'>UserAccount</li>
 
       </ul>
+
       <ul className = 'nav-list' id='ecommerceMenu'>
+      
+
+        
         <li className = 'nav-item'>
-          <a onClick = {handleHomeClick} href = {homePageLink} className = 'nav-link'>
+          <a 
+          // onMouseEnter={() => setIsVisibl(!isVisibl)}
+          onMouseEnter={() => setIsOn(!isOn)}
+          onClick = {handleHomeClick} href = {homePageLink} className = 'nav-link'>
             New + Bestsellers
+            {/* {isVisibl ? 'Hide' : 'New  Bestsellers'} */}
           </a>
+          {/* {isVisibl && <p>iiiiii</p>} */}
         </li>
         <li className = 'nav-item'>
           <a onClick = {handleAboutClick} href = {aboutPageLink} className = 'nav-link'>
@@ -94,6 +109,8 @@ function NavBar({homePageLink, aboutPageLink, contactPageLink}) {
 
    
       </ul>
+
+      {isOn && <About/>}
     </nav>
   );
 }
