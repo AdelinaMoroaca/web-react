@@ -1,25 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
 import './NavBar.css';
-import NavCategoryDetails from './NavNewBestsellers';
-import card1 from '../assets/paleta1.png';
-import card2 from '../assets/palleta-2.jpg';
-import card3 from '../assets/paleta1.png';
+import About from '../About';
 
 
 
 function NavBar({homePageLink, aboutPageLink, contactPageLink}) {
-  const[showBestsellers, setBestsellers] = useState(false);
-  const[showMakeup, setMakeup] = useState(false);
-  const[showSkincare, setIsSkincare] = useState(false);
-  const[isOnHair, setIsHair] = useState(false);
-  const[isOnFragrance, setIsFragrance] = useState(false);
-  const[isOnBeautyBox, setIsBeautyBox] = useState(false);
-  const[isOnVirtual, setIsVirtual] = useState(false);
-  const[isOnReplen, setIsReplen] = useState(false);
-  const[isOnDiscover, setIsDiscover] = useState(false);
-  const[isOnSale, setIsSale] = useState(false);
-
+  const[isOn, setIsOn] = useState(false);
 
     function handleHomeClick(event){
       event.preventDefault();
@@ -29,7 +16,7 @@ function NavBar({homePageLink, aboutPageLink, contactPageLink}) {
     function handleAboutClick(event){
       console.log('aboutPageLink');
       event.preventDefault();
-      //window.open({About}, '_blank');
+      window.open({About}, '_blank');
     }
 
     function handleContactClick(event){
@@ -41,7 +28,7 @@ function NavBar({homePageLink, aboutPageLink, contactPageLink}) {
   return (
     <nav id = 'nav'>
       <div id='freeShippingBanner'>
-        <p id='freeShipping'>Free Standard shipping to Romania over RON400</p>
+        <p id='freeShipping'>Free Standard shipping to Romania over RON360</p>
         <p id='offerShipping'>XXXX just pulled up, and you can only get it here. Sign up now to shop it first. | SHOP NOW</p>
       </div>
 
@@ -53,38 +40,26 @@ function NavBar({homePageLink, aboutPageLink, contactPageLink}) {
       </ul>
 
       <ul className = 'nav-list' id='ecommerceMenu'>
+      
+
+        
         <li className = 'nav-item'>
           <a 
-          
-          onMouseOver={() => setBestsellers(!showBestsellers, console.log('in'))}
-          onMouseLeave={() => setBestsellers(false)}
-          onClick={() => setBestsellers(!showBestsellers, console.log('in'))}
-    
-          href = {homePageLink} className = 'nav-link'>
+          // onMouseEnter={() => setIsVisibl(!isVisibl)}
+          onMouseEnter={() => setIsOn(!isOn)}
+          onClick = {handleHomeClick} href = {homePageLink} className = 'nav-link'>
             New + Bestsellers
             {/* {isVisibl ? 'Hide' : 'New  Bestsellers'} */}
           </a>
           {/* {isVisibl && <p>iiiiii</p>} */}
-          
         </li>
         <li className = 'nav-item'>
-
-          <a 
-          onMouseOver={() => setMakeup(!showMakeup)}
-          onMouseLeave={() => setMakeup(false)}
-          onClick={() => setMakeup(!showMakeup, console.log('in'))}>
-          
+          <a onClick = {handleAboutClick} href = {aboutPageLink} className = 'nav-link'>
             Makeup
           </a>
         </li>
-
         <li className = 'nav-item'>
-          <a href={contactPageLink} className = 'nav-link'
-          onMouseOver={() => setIsSkincare(!showSkincare)}
-          onMouseLeave={() => setIsSkincare(false)}
-          onClick={() => setIsSkincare(!showSkincare, console.log('in'))}>
-  {/* const[isOnSkincare, setIsSkincare] = useState(false); */}
-          
+          <a onClick={handleContactClick} href={contactPageLink} className = 'nav-link'>
             Skincare
           </a>
         </li>
@@ -134,36 +109,8 @@ function NavBar({homePageLink, aboutPageLink, contactPageLink}) {
 
    
       </ul>
-      {/* productCategory, imgCategory,cardCategory */}
-      {showBestsellers && < NavCategoryDetails
-          productCategory = 'list'
-          imgCategory = { card2 }
-        
-          cardCategory = 'card'
-          // { card2 }
-      />}
 
-{/* {!isOn && < NavCategoryDetails
-          productCategory = 'list'
-          imgCategory = { card2 }
-        
-          cardCategory = 'card'
-          // { card2 }
-      />} */}
-
-      {showMakeup && < NavCategoryDetails
-
-          productCategory = 'list'
-          imgCategory = { card3 }      
-          cardCategory = 'card'
-      />}
-
-      {showSkincare && < NavCategoryDetails
-
-      productCategory = 'list'
-      imgCategory = { card2 }      
-      cardCategory = 'card'
-      />}
+      {isOn && <About/>}
     </nav>
   );
 }
